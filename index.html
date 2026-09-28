@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NovaStore - Sua loja online moderna">
+    <title>NovaStore | Loja Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container nav">
+
+            <a href="#" class="logo">
+                Nova<span>Store</span>
+            </a>
+
+            <nav class="menu">
+                <a href="#inicio">Início</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="searchBtn" aria-label="Pesquisar">
+                    🔍
+                </button>
+
+                <button class="cart-btn" id="cartBtn" aria-label="Carrinho">
+                    🛒
+                    <span id="cartCount">0</span>
+                </button>
+
+                <button class="mobile-menu" id="mobileMenu">
+                    ☰
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+                    <span class="badge">✨ NOVA COLEÇÃO</span>
+
+                    <h1>
+                        Estilo que combina
+                        <span>com você.</span>
+                    </h1>
+
+                    <p>
+                        Descubra produtos selecionados para transformar
+                        seu dia a dia com qualidade, estilo e personalidade.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#produtos" class="btn btn-primary">
+                            Comprar agora →
+                        </a>
+
+                        <a href="#sobre" class="btn btn-secondary">
+                            Conheça a loja
+                        </a>
+                    </div>
+
+                    <div class="stats">
+                        <div>
+                            <strong>10k+</strong>
+                            <span>Clientes</span>
+                        </div>
+
+                        <div>
+                            <strong>4.9/5</strong>
+                            <span>Avaliação</span>
+                        </div>
+
+                        <div>
+                            <strong>100%</strong>
+                            <span>Original</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="hero-circle"></div>
+                    <div class="floating-card">
+                        <span>🔥 Mais vendido</span>
+                        <strong>Nova Collection</strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Categorias -->
+        <section class="categories">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-label">EXPLORE</span>
+                        <h2>Encontre o seu estilo</h2>
+                    </div>
+                </div>
+
+                <div class="category-grid">
+                    <button class="category-card active" data-category="todos">
+                        <span>✨</span>
+                        <strong>Todos</strong>
+                    </button>
+
+                    <button class="category-card" data-category="roupas">
+                        <span>👕</span>
+                        <strong>Roupas</strong>
+                    </button>
+
+                    <button class="category-card" data-category="calcados">
+                        <span>👟</span>
+                        <strong>Calçados</strong>
+                    </button>
+
+                    <button class="category-card" data-category="acessorios">
+                        <span>👜</span>
+                        <strong>Acessórios</strong>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Produtos -->
+        <section class="products-section" id="produtos">
+            <div class="container">
+
+                <div class="products-header">
+                    <div>
+                        <span class="section-label">DESTAQUES</span>
+                        <h2>Produtos populares</h2>
+                    </div>
+
+                    <div class="search-box">
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Buscar produto..."
+                        >
+                    </div>
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+
+                    <!-- Produto 1 -->
+                    <article class="product-card" data-category="roupas" data-name="Camiseta Essential">
+
+                        <div class="product-image purple">
+                            <span class="product-tag">NOVO</span>
+                            <div class="product-emoji">👕</div>
+
+                            <button class="favorite">♡</button>
+                        </div>
+
+                        <div class="product-info">
+                            <span class="product-category">Roupas</span>
+                            <h3>Camiseta Essential</h3>
+
+                            <div class="rating">
+                                ⭐⭐⭐⭐⭐
+                                <span>(124)</span>
+                            </div>
+
+                            <div class="price-row">
+                                <div>
+                                    <span class="old-price">R$ 129,90</span>
+                                    <strong>R$ 89,90</strong>
+                                </div>
+
+                                <button
+                                    class="add-cart"
+                                    data-name="Camiseta Essential"
+                                    data-price="89.90">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- Produto 2 -->
+                    <article class="product-card" data-category="calcados" data-name="Tênis Urban">
+
+                        <div class="product-image orange">
+                            <span class="product-tag sale">-20%</span>
+                            <div class="product-emoji">👟</div>
+
+                            <button class="favorite">♡</button>
+                        </div>
+
+                        <div class="product-info">
+                            <span class="product-category">Calçados</span>
+                            <h3>Tênis Urban</h3>
+
+                            <div class="rating">
+                                ⭐⭐⭐⭐⭐
+                                <span>(98)</span>
+                            </div>
+
+                            <div class="price-row">
+                                <div>
+                                    <span class="old-price">R$ 299,90</span>
+                                    <strong>R$ 239,90</strong>
+                                </div>
+
+                                <button
+                                    class="add-cart"
+                                    data-name="Tênis Urban"
+                                    data-price="239.90">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- Produto 3 -->
+                    <article class="product-card" data-category="acessorios" data-name="Bolsa Minimal">
+
+                        <div class="product-image pink">
+                            <div class="product-emoji">👜</div>
+
+                            <button class="favorite">♡</button>
+                        </div>
+
+                        <div class="product-info">
+                            <span class="product-category">Acessórios</span>
+                            <h3>Bolsa Minimal</h3>
+
+                            <div class="rating">
+                                ⭐⭐⭐⭐⭐
+                                <span>(76)</span>
+                            </div>
+
+                            <div class="price-row">
+                                <div>
+                                    <strong>R$ 179,90</strong>
+                                </div>
+
+                                <button
+                                    class="add-cart"
+                                    data-name="Bolsa Minimal"
+                                    data-price="179.90">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- Produto 4 -->
+                    <article class="product-card" data-category="roupas" data-name="Moletom Premium">
+
+                        <div class="product-image blue">
+                            <span class="product-tag">TREND</span>
+                            <div class="product-emoji">🧥</div>
+
+                            <button class="favorite">♡</button>
+                        </div>
+
+                        <div class="product-info">
+                            <span class="product-category">Roupas</span>
+                            <h3>Moletom Premium</h3>
+
+                            <div class="rating">
+                                ⭐⭐⭐⭐⭐
+                                <span>(156)</span>
+                            </div>
+
+                            <div class="price-row">
+                                <div>
+                                    <span class="old-price">R$ 249,90</span>
+                                    <strong>R$ 199,90</strong>
+                                </div>
+
+                                <button
+                                    class="add-cart"
+                                    data-name="Moletom Premium"
+                                    data-price="199.90">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- Produto 5 -->
+                    <article class="product-card" data-category="calcados" data-name="Tênis Street">
+
+                        <div class="product-image green">
+                            <div class="product-emoji">👞</div>
+
+                            <button class="favorite">♡</button>
+                        </div>
+
+                        <div class="product-info">
+                            <span class="product-category">Calçados</span>
+                            <h3>Tênis Street</h3>
+
+                            <div class="rating">
+                                ⭐⭐⭐⭐⭐
+                                <span>(63)</span>
+                            </div>
+
+                            <div class="price-row">
+                                <div>
+                                    <strong>R$ 219,90</strong>
+                                </div>
+
+                                <button
+                                    class="add-cart"
+                                    data-name="Tênis Street"
+                                    data-price="219.90">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- Produto 6 -->
+                    <article class="product-card" data-category="acessorios" data-name="Óculos Classic">
+
+                        <div class="product-image dark">
+                            <div class="product-emoji">🕶️</div>
+
+                            <button class="favorite">♡</button>
+                        </div>
+
+                        <div class="product-info">
+                            <span class="product-category">Acessórios</span>
+                            <h3>Óculos Classic</h3>
+
+                            <div class="rating">
+                                ⭐⭐⭐⭐⭐
+                                <span>(89)</span>
+                            </div>
+
+                            <div class="price-row">
+                                <div>
+                                    <strong>R$ 149,90</strong>
+                                </div>
+
+                                <button
+                                    class="add-cart"
+                                    data-name="Óculos Classic"
+                                    data-price="149.90">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="empty-message" id="emptyMessage">
+                    Nenhum produto encontrado.
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Banner -->
+        <section class="promo">
+            <div class="container promo-box">
+
+                <div>
+                    <span class="section-label">OFERTA ESPECIAL</span>
+
+                    <h2>
+                        20% OFF na sua
+                        <span>primeira compra.</span>
+                    </h2>
+
+                    <p>
+                        Use o cupom <strong>NOVA20</strong> no checkout.
+                    </p>
+                </div>
+
+                <a href="#produtos" class="btn btn-white">
+                    Aproveitar oferta →
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section class="about" id="sobre">
+            <div class="container about-grid">
+
+                <div class="about-image">
+                    <div class="about-icon">✦</div>
+                </div>
+
+                <div class="about-text">
+                    <span class="section-label">SOBRE A NOVASTORE</span>
+
+                    <h2>
+                        Produtos escolhidos
+                        <span>para você.</span>
+                    </h2>
+
+                    <p>
+                        A NovaStore nasceu com uma missão simples:
+                        oferecer produtos modernos, de qualidade e com
+                        preços acessíveis.
+                    </p>
+
+                    <div class="features">
+                        <div>
+                            <span>✓</span>
+                            <div>
+                                <strong>Qualidade garantida</strong>
+                                <p>Produtos selecionados cuidadosamente.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            <div>
+                                <strong>Entrega rápida</strong>
+                                <p>Enviamos seu pedido com agilidade.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            <div>
+                                <strong>Compra segura</strong>
+                                <p>Seus dados sempre protegidos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Carrinho -->
+    <aside class="cart-sidebar" id="cartSidebar">
+
+        <div class="cart-header">
+            <h2>Seu carrinho</h2>
+            <button id="closeCart">×</button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <span>🛒</span>
+                <p>Seu carrinho está vazio.</p>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">R$ 0,00</strong>
+            </div>
+
+            <button class="checkout-btn" id="checkoutBtn">
+                Finalizar compra
+            </button>
+
+        </div>
+
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Rodapé -->
+    <footer class="footer" id="contato">
+        <div class="container footer-grid">
+
+            <div>
+                <a href="#" class="logo">
+                    Nova<span>Store</span>
+                </a>
+
+                <p>
+                    Estilo, qualidade e personalidade
+                    em um só lugar.
+                </p>
+            </div>
+
+            <div>
+                <h4>Links</h4>
+                <a href="#inicio">Início</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre nós</a>
+            </div>
+
+            <div>
+                <h4>Atendimento</h4>
+                <a href="#">Central de ajuda</a>
+                <a href="#">Trocas e devoluções</a>
+                <a href="#">Frete e entrega</a>
+            </div>
+
+            <div>
+                <h4>Contato</h4>
+                <a href="mailto:contato@novastore.com">
+                    contato@novastore.com
+                </a>
+                <span>Seg - Sex, 9h às 18h</span>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 NovaStore. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
